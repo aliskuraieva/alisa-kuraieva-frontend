@@ -18,17 +18,37 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
 
   <body>
     <header>
       <div class="container">
-        <nav>
-          <div class="logo-container">
+        <div class="header-wrapper">
+          <div class="header-container">
             <a href="#" class="logo">AK</a>
+            <button type="button" class="burger" id="burger-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
           </div>
-          <div class="nav-container">
+          <nav class="nav-container" id="nav-menu">
             <ul>
               <li><a href="#about" data-key="about">About</a></li>
               <li>
@@ -41,8 +61,8 @@
               <button data-lang="en">EN</button>
               <button data-lang="uk">UK</button>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -55,7 +75,7 @@
               <h2 class="intro-title">
                 <span id="typed-output">Front-End Developer</span>
               </h2>
-              
+
               <p data-key="intro-text">
                 Welcome to my portfolio! I'm a Front-end Developer with a
                 passion for problem-solving and continuous learning. I'm eager
@@ -129,7 +149,7 @@
             </div>
             <div class="avatar-container">
               <img
-                src="src/public/profile1.jpg"
+                src="src/public/profile.jpg"
                 alt="Alisa Kuraieva"
                 class="avatar"
               />
@@ -146,23 +166,23 @@
               strong foundation in HTML, CSS, and JavaScript. I enjoy creating
               responsive, accessible, and visually engaging interfaces using
               modern technologies like React.
-              <br />
-
+            </p>
+            <p class="about-text" data-key="about-text">
               In addition to React, I work extensively with Angular and
               TypeScript, building scalable applications with tools like NgRx
               for state management. I also have hands-on experience with
               full-stack technologies such as NestJS, PostgreSQL, and Docker,
               which helps me understand backend processes and collaborate more
               effectively across teams.
-              <br />
-
+            </p>
+            <p class="about-text" data-key="about-text">
               I care deeply about code clarity, performance, and user
               experience. I'm a quick learner, a responsible team player, and
               someone who thrives on continuous improvement. Whether it's
               crafting clean UI components or architecting efficient flows, I
               focus on delivering thoughtful and reliable digital solutions.
-              <br />
-
+            </p>
+            <p class="about-text" data-key="about-text">
               My goal is to build meaningful web experiences that are both
               beautiful and robust.
             </p>
@@ -195,16 +215,21 @@
               My tech stack includes modern tools and frameworks for building
               functional web applications.
             </p>
-            <ul>
-              <li>JavaScript</li>
-              <li>React</li>
-              <li>Angular CLI</li>
-              <li>TypeScript</li>
-              <li>Node.js | NestJS</li>
-              <li>HTML5 | CSS3 | SCSS</li>
-              <li>REST API | Docker | Git</li>
-              <li>PostgreSQL | MongoDB</li>
-            </ul>
+
+            <div class="tech-grid">
+              <div class="tech-item">JavaScript</div>
+              <div class="tech-item">React</div>
+              <div class="tech-item">Angular CLI</div>
+              <div class="tech-item">TypeScript</div>
+              <div class="tech-item">Node.js</div>
+              <div class="tech-item">NestJS</div>
+              <div class="tech-item">HTML5 | CSS3 | SCSS</div>
+              <div class="tech-item">REST API</div>
+              <div class="tech-item">Docker</div>
+              <div class="tech-item">Git</div>
+              <div class="tech-item">PostgreSQL</div>
+              <div class="tech-item">MongoDB</div>
+            </div>
           </div>
         </div>
       </section>
@@ -219,68 +244,78 @@
               <li>
                 <h3 class="title">Meduzzen | Full-Stack & DevOps Internship</h3>
                 <em>Angular, NestJS, Docker, PostgreSQL, Auth0</em>
-                <br />Built a full-stack web app. Implemented Auth0 and JWT
-                auth, CRUD with validation, protected routes, NgRx state,
-                reusable UI and Docker setup.<br />
-                <a
-                  href="https://meduzzen-internship-front-813527134216.europe-central2.run.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Live Demo</a
-                >
-                |
-                <a
-                  href="https://github.com/aliskuraieva/meduzzen-internship-front"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Front GitHub</a
-                >
-                |
-                <a
-                  href="https://github.com/aliskuraieva/meduzzen-internship-back"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Back GitHub</a
-                >
+                <p class="portfolio-text">
+                  Built a full-stack web app. Implemented Auth0 and JWT auth,
+                  CRUD with validation, protected routes, NgRx state, reusable
+                  UI and Docker setup.
+                </p>
+
+                <div class="portfolio-links">
+                  <a
+                    href="https://meduzzen-internship-front-813527134216.europe-central2.run.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/aliskuraieva/meduzzen-internship-front"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Front GitHub</a
+                  >
+                  <a
+                    href="https://github.com/aliskuraieva/meduzzen-internship-back"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Back GitHub</a
+                  >
+                </div>
               </li>
               <li>
                 <h3 class="title">Water Tracker</h3>
-                <em>HTML5, CSS3, JS, React, Node.js</em><br />
-                Water Tracker is a web application that allows the user to
-                monitor their daily water intake.
-                <br />
-                <a
-                  href="https://drinkly-ten.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Live Demo</a
-                >
-                &nbsp;|&nbsp;
-                <a
-                  href="https://github.com/Kateryna-Katya/drinkly"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub Repo</a
-                >
+                <em>HTML5, CSS3, JS, React, Node.js</em>
+                <p class="portfolio-text">
+                  Water Tracker is a web application that allows the user to
+                  monitor their daily water intake.
+                </p>
+
+                <div class="portfolio-links">
+                  <a
+                    href="https://drinkly-ten.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/Kateryna-Katya/drinkly"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
               </li>
 
               <li>
                 <h3 class="title">Robot Blaze Dash Adventure</h3>
-                <em>HTML5, CSS3, JS</em><br />Promotional landing page for a
-                mobile game. <br />
-                <a
-                  href="https://aliskuraieva.github.io/stp-8617/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Live Demo</a
-                >
-                |
-                <a
-                  href="https://github.com/aliskuraieva/stp-8617"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
+                <em>HTML5, CSS3, JS</em>
+                <p class="portfolio-text">
+                  Promotional landing page for a mobile game. The page
+                  highlights the game's features, includes legal documentation.
+                </p>
+                <div class="portfolio-links">
+                  <a
+                    href="https://aliskuraieva.github.io/stp-8617/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/aliskuraieva/stp-8617"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </div>
               </li>
             </ul>
           </div>
@@ -290,44 +325,48 @@
       <section id="contacts">
         <div class="container">
           <div class="contacts-container">
-            <h2 class="contacts-title" data-key="contacts-title">Contact Me</h2>
-            <p class="contacts-text" data-key="contacts-text">
-              Feel free to reach out through any of these channels:
-            </p>
-            <ul>
-              <li>
-                Email:
-                <a href="mailto:alisa.mogila@gmail.com"
-                  >alisa.mogila@gmail.com</a
-                >
-              </li>
-              <li>Phone: <a href="tel:+380733187121">+380 73 318 71 21</a></li>
-              <li>
-                <a
-                  href="https://t.me/aliskuraieva"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Telegram</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/alisakuraieva/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/aliskuraieva"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub</a
-                >
-              </li>
-              <li>Kyiv, Ukraine</li>
-            </ul>
+            <div class="">
+              <h2 class="contacts-title" data-key="contacts-title">
+                Contact Me
+              </h2>
+              <p class="contacts-text" data-key="contacts-text">
+                Feel free to reach out through any of these channels:
+              </p>
+            </div>
+
+            <div class="contacts-links-container">
+              <ul class="contacts-list">
+                <li>
+                  <a href="mailto:alisa.mogila@gmail.com"
+                    >alisa.mogila@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://t.me/aliskuraieva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Telegram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/alisakuraieva/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/aliskuraieva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -335,26 +374,9 @@
 
     <footer>
       <div class="container">
-        <p>&copy; Alisa Kuraieva, 2025.</p>
+        <p>&copy; Alisa Kuraieva, 2025. All Rights Reserved.</p>
       </div>
     </footer>
-
     <script type="module" src="src/main.js"></script>
-    <script>
-      const options = {
-        strings: [
-          "Front-End Developer",
-          "Back-End Developer",
-          "Full-Stack Developer",
-        ],
-        typeSpeed: 50,
-        backSpeed: 30,
-        backDelay: 2000,
-        loop: true,
-        cursorChar: "|",
-      };
-
-      new Typed("#typed-output", options);
-    </script>
   </body>
 </html>

@@ -1,3 +1,32 @@
+const burgerBtn = document.getElementById("burger-btn");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = navMenu.querySelectorAll("a");
+
+burgerBtn.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
+});
+
+const options = {
+  strings: [
+    "Front-End Developer",
+    "Back-End Developer",
+    "Full-Stack Developer",
+  ],
+  typeSpeed: 50,
+  backSpeed: 30,
+  backDelay: 2000,
+  loop: true,
+  cursorChar: "|",
+};
+
+new Typed("#typed-output", options);
+
 const translations = {
   en: {
     title: "Alisa Kuraieva",
